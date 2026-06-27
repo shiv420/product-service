@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.lang.reflect.Array;
+
 import java.util.List;
 
 @RestController
@@ -20,9 +20,10 @@ public class ProductController {
             new Product("k8","EB00001","EBooks")
 
     );
-    @GetMapping("/products")
-    public List<Product> getProducts(){
-        return pList;
+    @GetMapping("/welcome-message")
+    public String WelcomeMessage(){
+        return "Welcome to Product Service";
     }
+
 
 }
